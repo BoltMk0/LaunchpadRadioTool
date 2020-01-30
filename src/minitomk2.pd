@@ -1,0 +1,13 @@
+#N canvas 1189 420 450 300 10;
+#X obj 62 108 inlet;
+#X obj 111 108 inlet;
+#X obj 160 108 inlet;
+#X obj 62 176 outlet;
+#X obj 111 176 outlet;
+#X obj 160 176 outlet;
+#X text 59 56 Midi Conversion from Launchpad Mini to LaunchpadMk2;
+#X obj 62 137 expr (8-int($f1/16))*10 + 1 + $f1-int($f1/16)*16 \;;
+#X connect 0 0 7 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 7 0 3 0;

@@ -1,0 +1,14 @@
+#N canvas 0 0 450 300 10;
+#X obj 126 62 inlet;
+#X obj 141 83 inlet;
+#X msg 89 100 bang;
+#X obj 126 141 outlet;
+#X text 191 124 inlet changes;
+#X obj 126 117 *;
+#X text 191 110 Automatically multiplies when either;
+#X text 191 94 mult;
+#X connect 0 0 5 0;
+#X connect 1 0 2 0;
+#X connect 1 0 5 1;
+#X connect 2 0 5 0;
+#X connect 5 0 3 0;
