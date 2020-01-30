@@ -32,7 +32,7 @@ snappier response after pushing a button.
 displayed numbers.
 
 ## Using LaunchpadRadioTool
-The main program can be found (relative to the downloaded unzipped folder) at: 
+The main program can be found (relative to this file) at: 
 
 `./src/Launchpad.pd`
 
