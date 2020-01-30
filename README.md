@@ -6,7 +6,7 @@ Very old project (don't judge!) for using a launchpad to drive a sampler/playbac
 2. Download a copy of the [LaunchpadRadioTool](https://github.com/BoltMk0/LaunchpadRadioTool/archive/master.zip) project
 and unzip.
 
-## Seting up Pd-Extended
+## Setting up Pd-Extended Audio
 _Pd-Extended is horrendously buggy software, and you will likely experience a complete loss of audio whilst performing
 these steps. If this does happen, simply close and reopen Pd-Extended. If you experience repetitive crashing when 
 opening Pd-Extended, pray to the gods you have wronged and google answers. Perhaps an uninstall/reinstall?_
@@ -22,6 +22,14 @@ My machine (6-core 4.0GHz) works best with Block size 64 and can achieve a Delay
 Yours may differ. If it sounds clean, you're ready to go.
 8. OPTIONAL: You may choose to try minimising the Delay value and Block size to achieve best performance. The benefit is
 snappier response after pushing a button.
+
+## Setting up Launchpad
+1. Plug in the launchpad. You should see beautiful colors. Marvel at them.
+2. Run Pd-Extended (if it's already open, close and re-open)
+3. Click "Media" in the toolbar, then "Midi Settings..."
+4. Make sure your desired device ("Launchpad somethingsomething..." is selected for BOTH input **and** output.
+5. Test by clicking "Media -> Test Audio and MIDI..." and hitting a few buttons, looking for changes in the
+displayed numbers.
 
 ## Using LaunchpadRadioTool
 The main program can be found (relative to the downloaded unzipped folder) at: 
@@ -43,39 +51,39 @@ The pad editor panel looks like this:
 
 ![alt text](imgs/edit_section.png)
 
-#####1) Name
+##### 1) Name
 Here the name of the pad can be set. This is purely cosmetic, though comes in very useful for keeping
 track of your layout. The number to the right reflects the unique pad number.
 
 To rename a pad click the "R" to the left and type. Names cannot contain spaces. When you are done, hit
 the enter key, or click "R" again.
 
-#####2) Trim
+##### 2) Trim
 If the pad is too quiet, you can boost the volume here. I think it's -12 to +12 dB.
 
 [R] Reset the trim to 0dB
 
 [Scale] Apply the trim to the samples (WARNING: only use this if the trim is not enough!)
 
-#####3) Speed
+##### 3) Speed
 Adjust the speed of the sample playback here. NOTE: If the sample isn't playing
 back at the right speed to start with, check the sample rate (10)
 
 [R] Reset the speed.
 
-#####4) Loop
+##### 4) Loop
 Checking this box makes the sample loop continuously until stopped.
 
-#####5) Pickup/Letdown
+##### 5) Pickup/Letdown
 The most fun of them all. Think about each pad as a vinyl player/turntable:
 Pickup affects how long it takes the turntable to reach its
 set speed, letdown affects how long it takes it to stop. Have a play!
 
-#####6) Color Group
+##### 6) Color Group
 Set the color for this pad (NOTE: Affects the launchpad buttons AND the GUI).
 This program was intended for the Launchpad Mk2, so the colors may not match with other devices.
 
-#####7) Release
+##### 7) Release
 The release function (what happens when you let go of the button) for each pad.
 - "nothing": nothing happens. Each press is a new "start" command (useful for
 stuff like the reggae horn etc.)
@@ -84,21 +92,21 @@ stuff like the reggae horn etc.)
 - "stop": Stop playback on release
 - "pause": Pause playback on release
 
-#####8) LoadSample
+##### 8) LoadSample
 Click here to load a new sample into the pad
 
-#####9) Save
+##### 9) Save
 Save the pad settings. Be sure to do this otherwise the program won't remember
 your settings! Saving can take a long time.
 
-#####10) Samplerate
+##### 10) Samplerate
 The samplerate of the loaded sample, NOT THE SAMPLE RATE OF THE AUDIO DRIVER!
 If the pad is playing back slower/faster than expected, try changing the samplerate.
 
-#####11) Sample array view
+##### 11) Sample array view
 Purely cosmetic representation of the sample. Lines up with AdmiralTrackbar.
 
-#####12) Admiral Trackbar
+##### 12) Admiral Trackbar
 Use this to:
 
 - GREEN - Set the playback start position
@@ -106,7 +114,7 @@ Use this to:
 
 relative to the Sample array view. The white is purely cosmetic.
 
-#####13) Other Controls
+##### 13) Other Controls
 - "Play": Simulate "play" command, starting playback.
 - "Stop": simulate "stop" command, stopping playback.
 - "Pause": you get the idea
@@ -114,6 +122,6 @@ relative to the Sample array view. The white is purely cosmetic.
 and makes loading faster. THIS CANNOT BE UNDONE!
 - "Reverse": Does what it says on the tin - reverses the sample.
 
-#####14) Autosave
+##### 14) Autosave
 ADVICE: Avoid using this. Automatically saves the pad config after a second 
 (maybe?) of inactivity. Saving takes a long time.
