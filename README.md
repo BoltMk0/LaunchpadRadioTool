@@ -1,6 +1,9 @@
 # LaunchpadRadioTool
 Very old project (don't judge!) for using a launchpad to drive a sampler/playback system.
 
+**NOTE: This has been modified to be compatible with Launchpad Mini, it won't work with any other launch pad
+in its current state**
+
 ## Tutorials / Demo Videos
 For video tutorials on using this software, see [these guides on YouTube](https://www.youtube.com/playlist?list=PLTIBfamjFuMqPPKHSTtDXcs3HO9aihnu7)
 
