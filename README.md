@@ -1,6 +1,9 @@
 # LaunchpadRadioTool
 Very old project (don't judge!) for using a launchpad to drive a sampler/playback system.
 
+## Tutorials / Demo Videos
+For video tutorials on using this software, see [these guides on YouTube](https://www.youtube.com/playlist?list=PLTIBfamjFuMqPPKHSTtDXcs3HO9aihnu7)
+
 ## Installation
 1. Download and install [PD-Extended](https://puredata.info/downloads/pd-extended)
 2. Download a copy of the [LaunchpadRadioTool](https://github.com/BoltMk0/LaunchpadRadioTool/archive/master.zip) project
