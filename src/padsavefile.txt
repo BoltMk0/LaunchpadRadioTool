@@ -1,11 +1,11 @@
-81 label symbol;
-81 rfunction nothing;
+81 label -;
+81 rfunction altstop;
 81 master 1;
 81 samplerate 44100;
-81 samplesize 0;
+81 samplesize 100;
 81 playspeed 1;
 81 start@ 0;
-81 stop@ 0.999;
+81 stop@ 0.99;
 81 starttime 0;
 81 stoptime 0;
 81 loop 0;

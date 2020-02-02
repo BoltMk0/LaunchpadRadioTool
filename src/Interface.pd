@@ -1,30 +1,30 @@
 #N canvas 433 103 1407 686 10;
 #X obj 100 100 cnv 10 400 275 empty empty empty 5 12 0 14 -33289 -66577
 0;
-#X obj 106 106 cnv 5 180 15 empty inttitle2r NoDiggity 20 8 1 14 -33289
--262144 0;
+#X obj 106 106 cnv 5 180 15 empty inttitle2r - 20 8 1 14 -33289 -262144
+0;
 #X obj 120 79 s inttitler;
-#X obj 261 106 cnv 15 25 15 empty inttitler 16 5 8 1 14 -33289 -262144
+#X obj 261 106 cnv 15 25 15 empty inttitler 81. 5 8 1 14 -33289 -262144
 0;
 #X msg 120 59 label \$1.;
-#X obj 291 106 cnv 10 202 237 empty intcolorbg empty 20 12 0 14 -104158
+#X obj 291 106 cnv 10 202 237 empty intcolorbg empty 20 12 0 14 -116511
 -262144 0;
-#X obj 307 308 bng 30 250 50 0 empty empty play 4 15 1 12 -4034 -4034
+#X obj 294 308 bng 30 250 50 0 empty empty play 4 15 1 12 -4034 -4034
 -262144;
-#X obj 343 308 bng 30 250 50 0 empty empty pause 4 15 1 9 -260097 -260097
+#X obj 327 308 bng 30 250 50 0 empty empty pause 4 15 1 9 -260097 -260097
 -262144;
-#X obj 379 308 bng 30 250 50 0 empty empty stop 4 15 1 12 -258113 -258113
+#X obj 360 308 bng 30 250 50 0 empty empty stop 4 15 1 12 -258113 -258113
 -262144;
 #X obj 295 275 hsl 195 8 0 0.999 0 0 intstart@ intstart@r empty -2
 -8 0 10 -1 -4034 -1 0 1;
-#X obj 295 295 hsl 195 8 0 0.999 0 0 intstop@ intstop@r empty -2 -8
-0 10 -1 -258113 -1 0 1;
+#X obj 295 295 hsl 195 8 0 0.993 0 0 intstop@ intstop@r empty -2 -8
+0 10 -1 -258113 -1 19200 1;
 #X obj 295 285 hsl 195 8 0 1 0 0 NULL NULLR empty -2 -8 0 10 -1 -262144
--1 0 1;
-#X obj 106 127 cnv 10 118 60 empty intcolorbg empty 4 6 0 10 -104158
+-1 1072 1;
+#X obj 106 127 cnv 10 118 60 empty intcolorbg empty 4 6 0 10 -116511
 -262144 0;
 #X obj 125 139 knob 38 38 0.125 8 1 0 inttrim inttrimr Trim -15 -5
-1 11 -1 -262144 -262144 0 1;
+1 11 -1 -262144 -262144 1850 1;
 #X obj 165 -52 s inttrimr;
 #X obj 108 561 s topad;
 #X obj 281 492 r intstart@;
@@ -32,24 +32,24 @@
 #X obj 353 492 r intstop@;
 #X msg 353 512 stop@ \$1;
 #X obj 106 319 cnv 15 111 24 empty intcolorbg LoadSample 4 12 1 14
--104158 -262144 0;
+-116511 -262144 0;
 #X obj 192 321 bng 20 250 50 0 intload NULLR empty 17 7 0 10 -128992
 -1 -1;
-#X obj 223 319 cnv 15 63 24 empty intcolorbg Save 5 12 1 14 -104158
+#X obj 223 319 cnv 15 63 24 empty intcolorbg Save 5 12 1 14 -116511
 -262144 0;
 #X obj 264 321 bng 20 50 20 0 intsave intsaver empty 17 7 0 10 -128992
 -262144 -262144;
 #X msg 109 518 load;
 #X msg 43 538 select \$1;
-#X obj 106 193 cnv 15 56 60 empty intcolorbg empty 4 6 0 10 -104158
+#X obj 106 193 cnv 15 56 60 empty intcolorbg empty 4 6 0 10 -116511
 -262144 0;
-#X obj 168 193 cnv 15 118 60 empty intcolorbg empty 4 6 0 10 -104158
+#X obj 168 193 cnv 15 118 60 empty intcolorbg empty 4 6 0 10 -116511
 -262144 0;
 #X obj 183 211 knob 32 32 1 2000 0 0 intpickup intpickupr Pickup -2
 -7 1 11 -1 -262144 -262144 0 1;
 #X obj 233 211 knob 32 32 1 3000 0 0 intletdown intletdownr Letdown
 -2 -7 1 11 -1 -262144 -262144 0 1;
-#X obj 202 259 cnv 15 84 55 empty intcolorbg Release 4 9 1 12 -104158
+#X obj 202 259 cnv 15 84 55 empty intcolorbg Release 4 9 1 12 -116511
 -262144 0;
 #X symbolatom 210 286 9 0 0 0 - intrelfr intrelf;
 #X msg 453 34 1;
@@ -57,7 +57,7 @@
 #X obj 587 169 s intrelfr;
 #X msg 587 79 symbol stop;
 #X msg 596 99 symbol pause;
-#X obj 106 259 cnv 15 90 55 empty intcolorbg ColourGroup 4 9 1 12 -104158
+#X obj 106 259 cnv 15 90 55 empty intcolorbg ColourGroup 4 9 1 12 -116511
 -262144 0;
 #X obj 119 285 bng 17 250 50 0 NULL NULLR < 5 8 0 10 -262144 -1 -1
 ;
@@ -82,8 +82,8 @@
 #X obj 294 110 cnv 15 196 160 empty empty empty 20 12 0 14 -262144
 -66577 0;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array SampleL 477696 float 2;
-#X coords 0 1 477696 -1 196 160 2 0 0;
+#X array SampleL 100 float 2;
+#X coords 0 1 100 -1 196 160 2 0 0;
 #X restore 294 110 graph;
 #X obj 102 -203 r rpadsettings;
 #X obj 196 -32 s intspeedr;
@@ -96,9 +96,9 @@
 #X obj 291 30 s intcolorset;
 #X msg 97 478 select 0;
 #X obj 456 434 r intletdown;
-#X obj 230 127 cnv 15 56 60 empty intcolorbg empty 4 6 0 10 -104158
+#X obj 230 127 cnv 15 56 60 empty intcolorbg empty 4 6 0 10 -116511
 -262144 0;
-#X obj 451 308 bng 30 250 50 0 NULL NULLR Reverse 3 15 1 7 -159808
+#X obj 426 308 bng 30 250 50 0 NULL NULLR Reverse 3 15 1 7 -159808
 -159808 -262144;
 #X obj 561 342 reversearray;
 #X obj 560 300 i;
@@ -107,7 +107,7 @@
 #X obj 432 487 r intrelf;
 #X msg 496 34 2;
 #X msg 560 321 sample\$1L sample\$1R SampleL;
-#X obj 415 308 bng 30 250 50 0 empty empty cut 6 15 1 12 -4160 -4160
+#X obj 393 308 bng 30 250 50 0 empty empty cut 6 15 1 12 -4160 -4160
 -262144;
 #N canvas 851 206 450 300 color 0;
 #X obj 116 127 inlet;
@@ -128,18 +128,17 @@
 #X connect 7 0 8 0;
 #X connect 8 0 6 3;
 #X restore 116 417 pd color;
-#X obj -53 144 arraycopy SampleL;
-#X msg -118 61 \; SampleL resize \$1;
-#X obj -118 39 arraysize;
-#X msg -118 19 set sample\$1L;
-#X msg -53 124 copy sample\$1L;
-#X obj -53 104 i;
+#X obj -303 61 arraycopy SampleL;
+#X msg -192 44 \; SampleL resize \$1;
+#X obj -192 22 arraysize;
+#X msg -192 -8 set sample\$1L;
+#X msg -303 41 copy sample\$1L;
 #X msg -73 -22 bang;
 #X obj -73 -3 delay 1;
-#X obj -111 98 delay 2;
-#X obj -73 -74 r intfiler;
+#X obj -71 30 delay 2;
+#X obj -287 -76 r intfiler;
 #X obj 243 145 knob 32 32 0.5 2 1 0 intspeed intspeedr Speed -2 -7
-1 11 -1 -262144 -262144 0 1;
+1 11 -1 -262144 -262144 1550 1;
 #X obj 791 380 loadbang;
 #X msg 668 444 samplesize \$1;
 #X obj 750 508 /~;
@@ -564,8 +563,8 @@ SampleL resize \$2;
 #X connect 38 0 1 0;
 #X restore 415 395 pd cut;
 #X obj 105 348 cnv 15 340 22 empty intcolorbg Samplerate: 4 12 1 14
--104158 -262144 0;
-#X obj 449 347 cnv 15 44 22 empty intcolorbg empty 2 6 1 9 -104158
+-116511 -262144 0;
+#X obj 449 347 cnv 15 44 22 empty intcolorbg empty 2 6 1 9 -116511
 -262144 0;
 #X obj 460 347 tgl 22 0 empty empty Autosave -10 11 1 10 -33289 -262144
 -262144 0 1;
@@ -628,7 +627,7 @@ SampleL resize \$2;
 #X msg -80 403 44100;
 #X obj 107 172 bng 15 250 50 0 NULL inttrimrstr R 4 7 0 10 -162280
 -162280 -262144;
-#X msg 45 91 1;
+#X msg 50 112 1;
 #X msg 807 601 0 1;
 #X msg 865 563 stop;
 #X obj 865 584 delay 1000;
@@ -638,7 +637,7 @@ SampleL resize \$2;
 #X obj 413 12 sel stop pause nothing altstop;
 #X msg 538 35 3;
 #X obj 750 465 trackbarV2;
-#N canvas 1249 279 450 300 globalbuttons 0;
+#N canvas 1249 279 450 300 globalbuttons 1;
 #X obj 48 26 r globalmidi;
 #X obj 48 54 route 19 29 39 49 59 69 79 89;
 #N canvas 716 259 450 300 stop 0;
@@ -976,168 +975,213 @@ master 1 \, \$2 samplerate 0 \, \$2 samplesize 100 \, \$2 playspeed
 #X connect 5 0 6 0;
 #X restore 789 83 pd globalbuttons;
 #X obj 583 -162 delay 2000;
+#X obj 460 308 bng 30 250 50 0 int_delete int_delete_r DELETE 3 15
+1 7 -128992 -258113 -262144;
+#N canvas 1340 403 450 300 delete 0;
+#X obj 166 44 r int_delete;
+#X obj 136 227 s int_delete_r;
+#X obj 276 167 s topad;
+#X msg 231 90 0;
+#X obj 166 80 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 80 131 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 178 169 label Sure?;
+#X obj 166 109 sel 1 0;
+#X obj 63 162 sel 1 0;
+#X msg 47 196 color 12;
+#X msg 200 197 label DELETE \, color 11;
+#X msg 103 197 color 13;
+#X obj 80 107 metro 200;
+#X msg 276 146 delete;
+#X connect 0 0 4 0;
+#X connect 4 0 7 0;
+#X connect 4 0 12 0;
+#X connect 5 0 8 0;
+#X connect 6 0 1 0;
+#X connect 7 0 6 0;
+#X connect 7 1 10 0;
+#X connect 7 1 13 0;
+#X connect 8 0 9 0;
+#X connect 8 1 11 0;
+#X connect 9 0 1 0;
+#X connect 10 0 1 0;
+#X connect 11 0 1 0;
+#X connect 12 0 5 0;
+#X connect 13 0 2 0;
+#X restore 703 249 pd delete;
+#X obj -24 -155 s selected_pad;
+#X obj 575 279 r selected_pad;
+#X obj -192 -79 r selected_pad;
+#X obj -179 -35 t a b a;
+#X obj -302 16 i;
+#X obj -287 -54 t b b;
 #X connect 4 0 2 0;
-#X connect 6 0 93 0;
-#X connect 6 0 133 0;
-#X connect 6 0 143 0;
-#X connect 7 0 94 0;
-#X connect 7 0 144 0;
-#X connect 8 0 95 0;
-#X connect 8 0 144 0;
+#X connect 6 0 92 0;
+#X connect 6 0 132 0;
+#X connect 6 0 142 0;
+#X connect 7 0 93 0;
+#X connect 7 0 143 0;
+#X connect 8 0 94 0;
+#X connect 8 0 143 0;
 #X connect 16 0 17 0;
-#X connect 16 0 124 0;
+#X connect 16 0 123 0;
 #X connect 17 0 15 0;
-#X connect 17 0 150 0;
+#X connect 17 0 149 0;
 #X connect 18 0 19 0;
-#X connect 18 0 124 0;
+#X connect 18 0 123 0;
 #X connect 19 0 15 0;
-#X connect 19 0 150 0;
+#X connect 19 0 149 0;
 #X connect 21 0 24 0;
 #X connect 23 0 44 0;
 #X connect 24 0 15 0;
 #X connect 25 0 15 0;
-#X connect 32 0 147 3;
-#X connect 33 0 147 3;
+#X connect 32 0 146 3;
+#X connect 33 0 146 3;
 #X connect 35 0 34 0;
 #X connect 36 0 34 0;
 #X connect 38 0 77 0;
 #X connect 41 0 77 1;
 #X connect 43 0 42 0;
 #X connect 43 0 64 0;
-#X connect 43 0 124 0;
+#X connect 43 0 123 0;
 #X connect 44 0 15 0;
 #X connect 45 0 34 0;
 #X connect 46 0 47 0;
-#X connect 46 0 124 0;
+#X connect 46 0 123 0;
 #X connect 47 0 15 0;
-#X connect 47 0 150 0;
+#X connect 47 0 149 0;
 #X connect 48 0 49 0;
-#X connect 48 0 100 1;
-#X connect 48 0 124 0;
+#X connect 48 0 99 1;
+#X connect 48 0 123 0;
 #X connect 49 0 15 0;
 #X connect 50 0 51 0;
-#X connect 50 0 124 0;
+#X connect 50 0 123 0;
 #X connect 51 0 15 0;
-#X connect 51 0 150 0;
+#X connect 51 0 149 0;
 #X connect 52 0 53 0;
-#X connect 52 0 124 0;
+#X connect 52 0 123 0;
 #X connect 53 0 15 0;
-#X connect 53 0 150 0;
+#X connect 53 0 149 0;
 #X connect 54 0 15 0;
-#X connect 54 0 150 0;
-#X connect 57 0 125 0;
+#X connect 54 0 149 0;
+#X connect 57 0 124 0;
 #X connect 64 0 15 0;
 #X connect 66 0 15 0;
 #X connect 67 0 54 0;
-#X connect 67 0 124 0;
-#X connect 67 0 144 1;
+#X connect 67 0 123 0;
+#X connect 67 0 143 1;
 #X connect 69 0 71 0;
 #X connect 71 0 75 0;
-#X connect 72 0 147 0;
-#X connect 73 0 108 0;
-#X connect 73 0 124 0;
-#X connect 74 0 147 3;
+#X connect 72 0 146 0;
+#X connect 73 0 107 0;
+#X connect 73 0 123 0;
+#X connect 74 0 146 3;
 #X connect 75 0 70 0;
-#X connect 76 0 118 0;
+#X connect 76 0 117 0;
 #X connect 80 0 79 0;
-#X connect 80 0 90 0;
-#X connect 80 0 92 0;
+#X connect 80 0 89 0;
+#X connect 80 0 91 0;
 #X connect 81 0 80 0;
 #X connect 82 0 78 0;
-#X connect 83 0 82 0;
+#X connect 83 0 84 0;
 #X connect 84 0 85 0;
-#X connect 85 0 80 0;
-#X connect 85 0 86 0;
-#X connect 86 0 83 0;
-#X connect 87 0 84 0;
-#X connect 89 0 129 0;
-#X connect 89 0 98 0;
-#X connect 90 0 150 0;
-#X connect 91 0 96 0;
-#X connect 92 0 91 1;
-#X connect 93 0 150 0;
-#X connect 94 0 150 0;
-#X connect 95 0 150 0;
-#X connect 96 0 11 0;
+#X connect 86 0 159 0;
+#X connect 88 0 128 0;
+#X connect 88 0 97 0;
+#X connect 89 0 149 0;
+#X connect 90 0 95 0;
+#X connect 91 0 90 1;
+#X connect 92 0 149 0;
+#X connect 93 0 149 0;
+#X connect 94 0 149 0;
+#X connect 95 0 11 0;
+#X connect 96 0 95 0;
 #X connect 97 0 96 0;
-#X connect 98 0 97 0;
-#X connect 99 0 100 0;
-#X connect 100 0 131 0;
-#X connect 101 0 15 0;
-#X connect 103 0 115 0;
-#X connect 103 1 116 0;
-#X connect 105 0 134 0;
-#X connect 105 0 152 0;
-#X connect 107 0 106 0;
-#X connect 108 0 15 0;
-#X connect 109 0 110 0;
+#X connect 98 0 99 0;
+#X connect 99 0 130 0;
+#X connect 100 0 15 0;
+#X connect 102 0 114 0;
+#X connect 102 1 115 0;
+#X connect 104 0 133 0;
+#X connect 104 0 151 0;
+#X connect 106 0 105 0;
+#X connect 107 0 15 0;
+#X connect 108 0 109 0;
+#X connect 111 0 112 0;
+#X connect 111 0 123 0;
+#X connect 112 0 15 0;
 #X connect 112 0 113 0;
-#X connect 112 0 124 0;
-#X connect 113 0 15 0;
-#X connect 113 0 114 0;
-#X connect 115 0 102 0;
-#X connect 116 0 102 0;
-#X connect 118 0 101 0;
-#X connect 118 0 124 0;
-#X connect 121 0 122 0;
-#X connect 124 0 123 0;
-#X connect 125 0 84 0;
-#X connect 125 0 81 0;
-#X connect 125 0 83 1;
-#X connect 125 0 25 0;
-#X connect 125 0 4 0;
-#X connect 125 0 71 1;
-#X connect 125 0 118 0;
-#X connect 125 1 103 0;
-#X connect 125 2 148 0;
-#X connect 125 3 14 0;
-#X connect 125 4 128 0;
-#X connect 125 4 130 0;
-#X connect 125 6 58 0;
-#X connect 125 7 60 0;
-#X connect 125 8 59 0;
-#X connect 125 9 62 0;
-#X connect 125 10 63 0;
-#X connect 125 11 61 0;
-#X connect 125 12 65 0;
-#X connect 125 12 66 0;
-#X connect 126 0 127 0;
-#X connect 127 0 88 0;
-#X connect 129 0 150 0;
-#X connect 130 0 150 0;
-#X connect 131 0 117 0;
-#X connect 132 0 131 1;
-#X connect 133 0 132 0;
-#X connect 134 0 23 0;
-#X connect 135 0 139 0;
-#X connect 136 0 138 0;
-#X connect 137 0 15 0;
-#X connect 137 0 124 0;
-#X connect 138 0 137 0;
-#X connect 138 0 130 0;
-#X connect 138 0 128 0;
-#X connect 139 0 137 0;
-#X connect 139 0 130 0;
-#X connect 139 0 128 0;
-#X connect 140 0 141 0;
-#X connect 141 0 13 0;
-#X connect 142 0 132 0;
-#X connect 143 0 144 0;
-#X connect 144 0 142 0;
-#X connect 145 0 34 0;
-#X connect 146 0 35 0;
-#X connect 146 1 36 0;
-#X connect 146 2 45 0;
-#X connect 146 3 145 0;
-#X connect 147 0 146 0;
-#X connect 148 0 33 0;
-#X connect 148 1 32 0;
-#X connect 148 2 74 0;
-#X connect 148 3 149 0;
-#X connect 148 4 34 0;
-#X connect 149 0 147 3;
-#X connect 150 0 91 0;
-#X connect 150 0 99 0;
-#X connect 150 1 142 0;
-#X connect 152 0 107 0;
+#X connect 114 0 101 0;
+#X connect 115 0 101 0;
+#X connect 117 0 100 0;
+#X connect 117 0 123 0;
+#X connect 120 0 121 0;
+#X connect 123 0 122 0;
+#X connect 124 0 83 0;
+#X connect 124 0 25 0;
+#X connect 124 0 4 0;
+#X connect 124 0 117 0;
+#X connect 124 0 154 0;
+#X connect 124 1 102 0;
+#X connect 124 2 147 0;
+#X connect 124 3 14 0;
+#X connect 124 4 127 0;
+#X connect 124 4 129 0;
+#X connect 124 6 58 0;
+#X connect 124 7 60 0;
+#X connect 124 8 59 0;
+#X connect 124 9 62 0;
+#X connect 124 10 63 0;
+#X connect 124 11 61 0;
+#X connect 124 12 65 0;
+#X connect 124 12 66 0;
+#X connect 125 0 126 0;
+#X connect 126 0 87 0;
+#X connect 128 0 149 0;
+#X connect 129 0 149 0;
+#X connect 130 0 116 0;
+#X connect 131 0 130 1;
+#X connect 132 0 131 0;
+#X connect 133 0 23 0;
+#X connect 134 0 138 0;
+#X connect 135 0 137 0;
+#X connect 136 0 15 0;
+#X connect 136 0 123 0;
+#X connect 137 0 136 0;
+#X connect 137 0 129 0;
+#X connect 137 0 127 0;
+#X connect 138 0 136 0;
+#X connect 138 0 129 0;
+#X connect 138 0 127 0;
+#X connect 139 0 140 0;
+#X connect 140 0 13 0;
+#X connect 141 0 131 0;
+#X connect 142 0 143 0;
+#X connect 143 0 141 0;
+#X connect 144 0 34 0;
+#X connect 145 0 35 0;
+#X connect 145 1 36 0;
+#X connect 145 2 45 0;
+#X connect 145 3 144 0;
+#X connect 146 0 145 0;
+#X connect 147 0 33 0;
+#X connect 147 1 32 0;
+#X connect 147 2 74 0;
+#X connect 147 3 148 0;
+#X connect 147 4 34 0;
+#X connect 148 0 146 3;
+#X connect 149 0 90 0;
+#X connect 149 0 98 0;
+#X connect 149 1 141 0;
+#X connect 151 0 106 0;
+#X connect 155 0 71 1;
+#X connect 156 0 81 0;
+#X connect 156 0 157 0;
+#X connect 157 0 158 0;
+#X connect 157 1 80 0;
+#X connect 157 2 81 0;
+#X connect 158 0 82 0;
+#X connect 159 0 158 0;
+#X connect 159 1 80 0;
 #X coords 0 -1 1 1 400 275 1 100 100;

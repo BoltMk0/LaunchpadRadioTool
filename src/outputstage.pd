@@ -1,29 +1,38 @@
-#N canvas 338 63 909 580 10;
-#X obj 100 100 cnv 15 400 218 empty empty empty 20 12 0 14 -33289 -66577
-0;
+#N canvas 592 75 909 580 10;
+#X obj 100 100 cnv 15 400 218 empty empty Version_1.0.1 20 12 0 14
+-33289 -128992 0;
 #X obj 444 130 vu 12 160 empty empty -1 -8 0 10 -66577 -1 0 0;
 #X obj 468 130 vu 12 160 empty empty -1 -8 0 10 -66577 -1 0 0;
 #X obj 235 543 pvu~ 30 30;
 #X obj 333 520 pvu~ 30 30;
-#X obj 100 322 r~ stereooutl;
-#X obj 185 322 r~ stereooutr;
+#X obj 100 374 r~ stereooutl;
+#X obj 185 374 r~ stereooutr;
 #X obj 379 120 vsl 20 180 0.01 1 1 0 patchmaster patchmasterr empty
 0 -9 0 10 -33991 -262144 -1 17900 1;
 #X obj 421 100 cnv 2 2 218 empty empty empty 20 12 0 14 -1 -66577 0
 ;
-#X obj 184 372 *~;
-#X obj 280 356 vline~;
-#X msg 280 335 \$1 10;
-#X obj 100 372 *~;
+#X obj 184 424 *~;
+#X obj 280 408 vline~;
+#X msg 280 387 \$1 10;
+#X obj 100 424 *~;
 #X obj 100 537 dac~;
-#X obj 28 322 r~ monoout;
-#X obj 28 372 *~;
+#X obj 28 374 r~ monoout;
+#X obj 28 424 *~;
 #X msg 379 59 1;
 #X obj 379 39 loadbang;
 #X obj 121 513 *~;
 #X obj 100 513 *~;
 #X obj 342 457 vline~;
 #X obj 343 433 r audioduck;
+#X obj 132 152 bng 120 250 50 0 empty empty StopAll 27 60 1 20 -185426
+-1 -1;
+#X text 383 158 M;
+#X text 383 172 A;
+#X text 383 185 S;
+#X text 383 199 T;
+#X text 383 213 E;
+#X text 383 227 R;
+#X msg 134 328 \; global hardstop;
 #X connect 3 0 1 0;
 #X connect 4 0 2 0;
 #X connect 5 0 12 0;
@@ -47,4 +56,5 @@
 #X connect 20 0 18 1;
 #X connect 20 0 19 1;
 #X connect 21 0 20 0;
+#X connect 22 0 29 0;
 #X coords 0 -1 1 1 400 218 2 100 100;
