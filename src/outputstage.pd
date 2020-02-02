@@ -1,4 +1,4 @@
-#N canvas 592 75 909 580 10;
+#N canvas 291 193 909 580 10;
 #X obj 100 100 cnv 15 400 218 empty empty Version_1.0.1 20 12 0 14
 -33289 -128992 0;
 #X obj 444 130 vu 12 160 empty empty -1 -8 0 10 -66577 -1 0 0;
