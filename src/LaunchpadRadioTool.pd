@@ -1,4 +1,4 @@
-#N canvas 720 160 916 510 10;
+#N canvas 582 150 916 510 10;
 #X obj 3 3 faceplate;
 #X obj 506 3 interface;
 #X obj 506 284 outputstage;
