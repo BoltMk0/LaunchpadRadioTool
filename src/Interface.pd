@@ -1,8 +1,8 @@
-#N canvas 362 108 1407 686 10;
+#N canvas 286 60 1407 957 10;
 #X obj 100 100 cnv 10 400 275 empty empty empty 5 12 0 14 -33289 -66577
 0;
 #X obj 34 -106 s inttitler;
-#X obj 261 106 cnv 15 25 15 empty inttitler 81 5 8 1 14 -33289 -128992
+#X obj 261 106 cnv 15 25 15 empty inttitler 81. 5 8 1 14 -33289 -128992
 0;
 #X msg 34 -126 label \$1.;
 #X obj 291 106 cnv 10 202 237 empty intcolorbg empty 20 12 0 14 -201486
@@ -18,7 +18,7 @@
 #X obj 295 295 hsl 195 8 0 0.993 0 0 intstop@ intstop@r empty -2 -8
 0 10 -1 -258439 -1 19341 1;
 #X obj 295 285 hsl 195 8 0 1 0 0 NULL NULLR empty -2 -8 0 10 -1 -128992
--1 1955 1;
+-1 2152 1;
 #X obj 106 127 cnv 10 118 60 empty intcolorbg empty 4 6 0 10 -201486
 -262144 0;
 #X obj 125 139 knob 38 38 0.125 8 1 0 inttrim inttrimr Trim -15 -5
@@ -72,10 +72,10 @@
 #X obj 294 110 cnv 15 196 160 empty empty empty 20 12 0 14 -262144
 -66577 0;
 #N canvas 0 0 450 300 (subpatch) 0;
-#X array SampleL 475648 float 2;
-#X coords 0 1 475648 -1 196 160 2 0 0;
+#X array SampleL 339968 float 2;
+#X coords 0 1 339968 -1 196 160 2 0 0;
 #X restore 294 110 graph;
-#X obj 102 -203 r rpadsettings;
+#X obj 102 -293 r rpadsettings;
 #X obj 196 -32 s intspeedr;
 #X obj 228 -73 s intstop@r;
 #X obj 212 -117 s intstart@r;
@@ -798,7 +798,7 @@ master 1 \, \$2 samplerate 0 \, \$2 samplesize 100 \, \$2 playspeed
 #X connect 13 0 15 0;
 #X connect 15 0 14 1;
 #X restore 789 103 pd delete;
-#X obj 77 -152 s selected_pad;
+#X obj 129 -229 s selected_pad;
 #X obj 575 279 r selected_pad;
 #X obj -192 -79 r selected_pad;
 #X obj -179 -35 t a b a;
@@ -814,8 +814,11 @@ master 1 \, \$2 samplerate 0 \, \$2 samplesize 100 \, \$2 playspeed
 #X msg 138 627 symbol pad\$1;
 #X obj 138 607 r selected_pad;
 #X msg 126 456 open;
-#X obj 120 106 cnv 15 100 20 empty inttitle2r On_Air_Online_On_Demand_(Dry).wav
-4 8 1 10 -33289 -262144 0;
+#X obj 120 106 cnv 15 100 20 empty inttitle2r test 4 8 1 10 -33289
+-262144 0;
+#X obj 329 -175 print;
+#X obj 102 -271 t a a;
+#X msg 129 -250 \$1;
 #X connect 3 0 1 0;
 #X connect 5 0 81 0;
 #X connect 5 0 117 0;
@@ -861,7 +864,7 @@ master 1 \, \$2 samplerate 0 \, \$2 samplesize 100 \, \$2 playspeed
 #X connect 46 0 149 0;
 #X connect 47 0 134 0;
 #X connect 47 0 149 0;
-#X connect 50 0 109 0;
+#X connect 50 0 155 0;
 #X connect 57 0 149 0;
 #X connect 59 0 47 0;
 #X connect 59 0 108 0;
@@ -911,7 +914,6 @@ master 1 \, \$2 samplerate 0 \, \$2 samplesize 100 \, \$2 playspeed
 #X connect 105 0 108 0;
 #X connect 108 0 107 0;
 #X connect 109 0 3 0;
-#X connect 109 0 139 0;
 #X connect 109 1 91 0;
 #X connect 109 2 132 0;
 #X connect 109 3 13 0;
@@ -982,4 +984,7 @@ master 1 \, \$2 samplerate 0 \, \$2 samplesize 100 \, \$2 playspeed
 #X connect 150 0 149 1;
 #X connect 151 0 150 0;
 #X connect 152 0 149 0;
+#X connect 155 0 109 0;
+#X connect 155 1 156 0;
+#X connect 156 0 139 0;
 #X coords 0 -1 1 1 400 275 1 100 100;
